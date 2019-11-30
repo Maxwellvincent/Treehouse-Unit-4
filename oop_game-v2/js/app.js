@@ -7,16 +7,16 @@
 //  const phrase = new Phrase();
 //  const game = new Game();
 
-const phrase = new Phrase(`Life is like a box of chocolates`);
-// phrase is the property of the phrase object. 
-console.log(`Phrase - phrase: ${phrase.phrase}`);
-
+// const phrase = new Phrase(`Life is like a box of chocolates`);
+// // phrase is the property of the phrase object. 
+// console.log(`Phrase - phrase: ${phrase.phrase}`);
+// console.log(phrase);
     // This WORKS!!
-const game = new Game();
-game.phrase.forEach((phrase, index) => {
-console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
-});
-console.log(game);
+// const game = new Game();
+// game.phrase.forEach((phrase, index) => {
+// console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
+// });
+// console.log(game);
 
     // This WORKS!!
 // const logPhrase = (phrase) => {
@@ -29,3 +29,7 @@ console.log(game);
 //     logPhrase(game.getRandomPhrase());
 //     logPhrase(game.getRandomPhrase());
 
+const game = new Game();
+const randomPhrase = game.getRandomPhrase();
+const phrase = new Phrase(randomPhrase.phrase);
+phrase.addPhraseToDisplay();
