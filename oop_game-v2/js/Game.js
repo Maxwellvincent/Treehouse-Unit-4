@@ -18,13 +18,13 @@
         */
             createPhrase() {
                 // Create an [Array] of {objects(phrases)} that can be used in the game
-            let phrases = [
-                {phrase:"What we think we become"},
-                {phrase:"Stop existing and start living"},
-                {phrase:"There’s always a way"},
-                {phrase:"Chance favors the prepared mind"},
-                {phrase:"All limitations are self imposed"}
-            ];
+                let phrases = [
+                    {phrase:"What we think we become"},
+                    {phrase:"Stop existing and start living"},
+                    {phrase:"There’s always a way"},
+                    {phrase:"Chance favors the prepared mind"},
+                    {phrase:"All limitations are self imposed"}
+                ];
             return phrases;
         };
 
@@ -40,7 +40,14 @@
         };
 
 
+        /**
+        * Begins game by selecting a random phrase and displaying it to user
+        */
 
+        startGame() {
+            $('overlay').hide();
+            
+        };
 
 
 
