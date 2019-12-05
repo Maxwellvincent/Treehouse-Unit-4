@@ -31,4 +31,31 @@
             }        
         }
 
+        /**
+        * Checks if passed letter is in phrase
+        * @param (string) letter - Letter to check
+        */
+
+    checkLetter(letter) {
+        if(letter.includes(this.phrase)) {
+            console.log("Match");
+        } else {
+            console.log("No MATCH");
+        }
+    };
+
+        /**
+        * Displays passed letter on screen after a match is found
+        * @param (string) letter - Letter to display
+        */
+
+    showMatchedLetter(letter) {
+        if(this.checkLetter = true){
+            let selectedLetter = letter;
+            let matchedLetter = $('li').includes(selectedLetter);
+            matchedLetter.removeClassName('hide');
+            matchedLetter.addClassName('show');
+        }
+    };
+
  }
