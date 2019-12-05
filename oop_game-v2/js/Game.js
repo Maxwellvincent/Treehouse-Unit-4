@@ -19,11 +19,11 @@
             createPhrase() {
                 // Create an [Array] of {objects(phrases)} that can be used in the game
                 let phrases = [
-                    {phrase:"What we think we become"},
-                    {phrase:"Stop existing and start living"},
-                    {phrase:"There’s always a way"},
-                    {phrase:"Chance favors the prepared mind"},
-                    {phrase:"All limitations are self imposed"}
+                    new Phrase("What we think we become"),
+                    new Phrase("Stop existing and start living"),
+                    new Phrase("There’s always a way"),
+                    new Phrase("Chance favors the prepared mind"),
+                    new Phrase("All limitations are self imposed")
                 ];
             return phrases;
         };
@@ -45,8 +45,14 @@
         */
 
         startGame() {
-            $('overlay').hide();
-            
+            // hides the display so that you can see the Boxes
+            $('#overlay').hide();
+            // calls the getRandom Method to grab a random phrase from the game class
+            let word = this.getRandomPhrase();
+            // this returns an object (phrase), which allows me to call that objects method of Display
+            word.addPhraseToDisplay();
+            // Set the object (word), Set it equal to activephrase.
+            this.activePhrase = word;
         };
 
 
