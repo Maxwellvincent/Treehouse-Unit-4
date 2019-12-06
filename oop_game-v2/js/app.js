@@ -43,8 +43,22 @@
 // console.log(game);
 // console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
 
+let game;
+const startButton = $('#btn__reset');
+const screenKeyboard = $('#qwerty .key');
 
-// const startButton = $('#btn__reset').on('click', function() {
-//     const game = new Game();
-//     game.startGame();
-// })
+
+
+startButton.on('click', function() {
+    game = new Game();
+    game.startGame();
+    
+    
+})
+
+screenKeyboard.on('click', function(e) {
+    
+    let button = e.target;
+    game.handleInteraction(button);   
+
+})
