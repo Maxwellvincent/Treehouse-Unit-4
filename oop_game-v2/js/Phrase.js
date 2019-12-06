@@ -37,10 +37,10 @@
         */
 
     checkLetter(letter) {
-        if(letter.includes(this.phrase)) {
-            console.log("Match");
+        if(this.phrase.includes(letter)) {
+            return true;
         } else {
-            console.log("No MATCH");
+            return false;
         }
     };
 
@@ -50,12 +50,21 @@
         */
 
     showMatchedLetter(letter) {
-        if(this.checkLetter = true){
-            let selectedLetter = letter;
-            let matchedLetter = $('li').includes(selectedLetter);
-            matchedLetter.removeClassName('hide');
-            matchedLetter.addClassName('show');
+        // Letter is a string, 
+        // Grabs all list items with the class of letter. 
+        let matchedLetter = document.querySelectorAll(`.letter`);
+        console.log(matchedLetter);
+        // creates a loop to check all letter within the array, check to see if the match letter
+        for (let i = 0; i < matchedLetter.length; i++) {
+
+            if ( matchedLetter[i].innerHTML === letter) {
+                matchedLetter[i].classList.remove('hide');
+                matchedLetter[i].classList.add('show');
+            }
         }
+        console.log(matchedLetter);
+        // Must return letter 
+        return letter;
     };
 
  }
