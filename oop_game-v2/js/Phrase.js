@@ -53,7 +53,7 @@
         // Letter is a string, 
         // Grabs all list items with the class of letter. 
         let matchedLetter = document.querySelectorAll(`.letter`);
-        console.log(matchedLetter);
+        // console.log(matchedLetter);
         // creates a loop to check all letter within the array, check to see if the match letter
         for (let i = 0; i < matchedLetter.length; i++) {
 
@@ -62,7 +62,7 @@
                 matchedLetter[i].classList.add('show');
             }
         }
-        console.log(matchedLetter);
+        // console.log(matchedLetter);
         // Must return letter 
         return letter;
     };
