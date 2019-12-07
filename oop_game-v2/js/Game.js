@@ -59,11 +59,29 @@
             // Once the game has ended this function will be called. 
 
         resetGame() {
-            const listItems = document.getElementById("phrase");
-            console.log(listItems);
+            // really have to make sure your grabbing the correct Element, and index for ul children to work.
+            const listItems = document.getElementById("phrase").getElementsByTagName("ul")[0];
+            // grab all of the buttons with the class of key. 
+            const allButtons = document.querySelectorAll('.keyrow button');
+            
+            // Creates a for loop to gather all the buttons. Then remove the class (javascript method), and add class (javascript method)
+            for (let i = 0; i < allButtons.length; i++) {
+                allButtons[i].classList.remove("chosen");
+                allButtons[i].classList.remove("wrong");
+                allButtons[i].disabled = false;
+                allButtons[i].classList.add("key");
+            }
 
+            // Creates a while loop that runs until no more children are within the ul 
             while (listItems.hasChildNodes()){
                 listItems.removeChild(listItems.firstChild);
+            }
+
+
+            // creates a loop to gather all hearts, remove and replace the img. 
+            const newLives = document.getElementsByTagName("img");
+            for( let i = 0; i < newLives.length; i++){
+                newLives[i].src = "images/liveHeart.png";
             }
         }
 
