@@ -47,7 +47,11 @@ let game;
 const startButton = $('#btn__reset');
 const screenKeyboard = $('#qwerty .key');
 
-
+document.addEventListener('keyup', function(e) {
+    console.log(e.key);
+    // Not sure how to change the string into an object to be passed into my handleInteraction()
+    
+})
 
 startButton.on('click', function() {
     game = new Game();
@@ -59,6 +63,7 @@ startButton.on('click', function() {
 screenKeyboard.on('click', function(e) {
     
     let button = e.target;
+    // console.log(button);
     game.handleInteraction(button);   
 
 })
