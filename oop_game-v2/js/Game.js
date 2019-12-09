@@ -131,7 +131,7 @@
        
         removeLife() {
             // Created an if statement instead of a for loop because I only wanted to lose 1 life at a time.
-            if (this.missed < 5) {
+            if (this.missed < 4) {
                 // Grabbed the img tag name, brings back an array. 
                 let hearts = document.getElementsByTagName('img');
                 // accessed the hearts array index, and the property of src to change it. 
